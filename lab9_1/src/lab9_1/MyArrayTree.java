@@ -44,10 +44,10 @@ public class MyArrayTree {
 
 	// 인덱스 index인 노드를 루트로 하는 트리를 중위 순회하는 메소드
 	private void inorder(int index) {
-		if(number < index) {
-			preorder(2 * index + 1);
+		if(number > index) {
+			inorder(2 * index + 1);
 			System.out.print(treeArray[index] + " ");
-			preorder(2 * index + 2);
+			inorder(2 * index + 2);
 		}
 
 	}
@@ -56,10 +56,12 @@ public class MyArrayTree {
 	public void printLeft() {
 		int index = 0;
 	
-		while (number < index) {
-			System.out.print(treeArray[index]);
-			index = 2 * index + 2;
+		while (number > index) {
+			System.out.print(treeArray[index] + " ");
+			index = 2 * index + 1;
 		}
+		System.out.println();
+		System.out.println();
 	 
 
 

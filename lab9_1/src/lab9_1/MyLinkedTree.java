@@ -60,9 +60,9 @@ public class MyLinkedTree {
 	// p를 루트로 하는 트리를 중위 순회하는 메소드(재귀 메소드)
 	private void inorder(Node p)  { 
 		if (p != null) {
-			preorder(p.leftChild);
+			inorder(p.leftChild);
 			System.out.print(p.data + " ");
-			preorder(p.rightChild);
+			inorder(p.rightChild);
 		}
 
 
