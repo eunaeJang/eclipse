@@ -71,7 +71,7 @@ public class MyLinkedTree {
 	// 루트노드부터 리프노드에 이르기까지 왼쪽 자식들을 출력하는 메소드(재귀 메소드 아님. 반복문 이용할 것)
 	public void printLeft() {
 		Node leaf = root;
-		if (root != null) {
+		if (leaf != null) {
 			while(leaf != null) {
 				System.out.print(leaf.data + " ");
 				leaf = leaf.leftChild;
